@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Profile - Tasty Home Food Delivery Service</title>
+  <link rel="stylesheet" href="./Create New Profile/foodDelivaryCss.css">
+  <style>
+    td {
+      padding: 20px;
+    }
+
+    .text {
+      font-family: Verdana;
+      font-size: 25px;
+      background-color: #d9d9d9;
+    }
+
+    #js_button {
+      width: 120px;
+      height: 40px;
+      background-color: red;
+      color: white;
+      font-family: Verdana;
+      font-weight: bold;
+    }
+
+    .backLink {
+      font-size: 20px;
+      font-weight: bold;
+      background-color: white;
+      text-decoration: none;
+    }
+
+    .backLink:hover {
+      background-color: #99ffff;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="text">Greetings, Please fill the form below to get enrolled
+    into the World's Best Home Food Delivery Service</p>
+
+  <form action="https://sbasu.pythonanywhere.com/tastyFoodApp/customerPage" method="post">
+    <div class="container">
+      <a class="backLink" href="https://sbasu.pythonanywhere.com/tastyFoodApp/">HOME</a>
+      <input class="submitButton" type="submit" name="submit">
+      <table>
+        <tbody>
+          <tr></tr>
+
+          <tr>
+            <td><label for="id_firstName">First Name</label></td>
+            <td><input type="text" name="firstName" class="fieldStyle" required="" id="id_firstName"></td>
+          </tr>
+
+          <tr>
+            <td><label for="id_lastName">Last Name</label></td>
+            <td><input type="text" name="lastName" class="fieldStyle" required="" id="id_lastName"></td>
+          </tr>
+
+          <tr>
+            <td><label for="id_gender_0">Gender</label></td>
+            <td>
+              <ul id="id_gender">
+                <li><label for="id_gender_0"><input type="radio" name="gender" value="m" required="" id="id_gender_0">
+                    Male</label>
+                </li>
+                <li><label for="id_gender_1"><input type="radio" name="gender" value="f" required="" id="id_gender_1">
+                    Female</label>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="id_username">Username</label></td>
+            <td><input type="text" name="username" class="fieldStyle" required="" id="id_username"></td>
+          </tr>
+
+          <tr>
+            <td><label for="id_password">Password</label></td>
+            <td><input type="password" name="password" class="fieldStyle" required="" id="id_password"></td>
+          </tr>
+
+          <tr>
+            <td><label for="id_state">State</label></td>
+            <td><select name="state" class="fieldStyle" id="id_state">
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <option value="TX">Texas</option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <td><label for="id_fee">Monthly Fee : Please select a package</label></td>
+            <td>
+              <select name="fee" class="fieldStyle" id="id_fee">
+                <option value="Basic">$50 : Basic</option>
+                <option value="Silver">$100 : Silver</option>
+                <option value="Gold">$150 : Gold</option>
+                <option value="Platinum">$200 : Platinum</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="id_date">Date : Please enter date in format mm/dd/yyyy </label></td>
+            <td><input type="text" name="date" required="" id="id_date"></td>
+          </tr>
+
+          <tr>
+            <td><button id="js_button" type="button" onclick="createNewProfile()">TEST POPUP</button></td>
+          </tr>
+
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+
+  <script src="./Create New Profile/tasty_FoodJs.js"></script>
+  
+</body>
+</html>
