@@ -41,7 +41,12 @@ print(students[:5])
 cols = ["이름", "국어", "영어", "수학", "과학", "정보", "체육", "미술"]
 df = pd.DataFrame(students, columns = cols)
 
-df["총계"] = df[cols[1]] + df[cols[2]] + df[cols[3]] + df[cols[4]] + df[cols[5]] + df[cols[6]] + df[cols[7]] 
+#df["총계"] = df[cols[1]] + df[cols[2]] + df[cols[3]] + df[cols[4]] + df[cols[5]] + df[cols[6]] + df[cols[7]] 
+
+df["총계"] = 0
+for sub_name in cols[1:]:
+    df["총계"] = df["총계"] + df[sub_name]
+    
 df["평균"] = df["총계"] / (len(cols) - 1)
 print(df[df["평균"] == df["평균"].max()])
 print(df[df["평균"] == df["평균"].min()])
