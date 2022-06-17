@@ -44,4 +44,14 @@ df.rename(columns={0 : "이름"})
 
 df = df.rename(columns={0 : "이름"})
 df.rename(columns={0 : "이름"}, inplace=True)
+df.index = range(1, 201)
+pd.set_option('display.max_rows', 500)
                
+               
+df.drop(["영어"], axis = 1, inplace = True)
+             
+df = pd.DataFrame()
+df = df.append([f.name() for i in range(100)])
+df = df.rename(columns={0 : "이름"})
+               
+df["국어"] = [random.randint(1, 100)]
