@@ -1,0 +1,90 @@
+List 에서 Dict으로 변환하는 방법에는 여러가지 방법이 있습니다...!
+
+
+string_list = ['A','B','C']
+위와 같은 리스트가 있을때, 딕셔너리로 변환시키는 여러가지 방법들 ..!
+
+ 
+
+1. Dictionary Comprehesion(딕셔너리 컴프리헨션) 이용
+
+string_list = ['A','B','C']
+dictionary = {string : 0 for string in string_list}
+print(dictionary)
+ 
+{'A': 0, 'B': 0, 'C': 0}
+
+위의 방식을 조금 변경하면..
+
+string_list = ['A','B','C']
+dictionary = {string : i for i,string in enumerate(string_list)}
+print(dictionary)
+ 
+{'A': 0, 'B': 1, 'C': 2}
+
+이런식의 코딩도 가능합니다..!
+
+
+2. dict.fromkeys(key, value) 이용
+
+string_list = ['A','B','C']
+dictionary = dict.fromkeys(string_list,0)
+print(dictionary)
+
+{'A': 0, 'B': 0, 'C': 0}
+
+Value에 아무것도 적지 않는다면 value는 None으로 됩니다.
+
+
+string_list = ['A','B','C']
+dictionary = dict.fromkeys(string_list)
+print(dictionary)
+ 
+{'A': None, 'B': None, 'C': None}
+ 
+
+3. list의 값을 value로 갖는 dict 만들기 (1번 방법에서 key와 value가 반대로)
+
+string_list = ['A','B','C']
+dictionary = {i : string_list[i] for i in range(len(string_list))}
+print(dictionary)
+{0: 'A', 1: 'B', 2: 'C'}
+
+이번에는 두개의 list 가지고 놀아봅시다..!
+
+string_list = ['A','B','C']
+int_list = [1, 2, 3]
+ 
+위 두개의 리스트를 key : value 형식으로 바꿔봅시당~
+
+1. zip 사용하여 묶기
+
+string_list = ['A','B','C']
+int_list = [1, 2, 3]
+dictionary = dict(zip(string_list, int_list))
+print(dictionary)
+ 
+
+{'A': 1, 'B': 2, 'C': 3}
+물론 string_list 와 int_list의 순서를 바꾸면 key와 value도 변경됩니다.
+
+string_list = ['A','B','C']
+int_list = [1, 2, 3]
+dictionary = dict(zip(int_list, string_list))
+print(dictionary)
+ 
+{1: 'A', 2: 'B', 3: 'C'}
+ 
+
+그러면 tuple로 되어있는 list는 dict으로 어떻게 바꾸나요!
+tuple_list = [('A',1), ('B',2), ('C',3)]
+ 
+
+이러한 튜플 리스트가 있을때.. dict으로 변경하기 위해서는 dict()을 사용해주면 됩니다.
+
+tuple_list = [('A',1), ('B',2), ('C',3)]
+dictionary = dict(tuple_list)
+print(dictionary)
+
+{'A': 1, 'B': 2, 'C': 3}
+ 
