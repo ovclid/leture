@@ -37,8 +37,27 @@ for i in range(1000):
     students.append(student)
 
 print(students[:5])
+
+# %%
+for i in range(students_num):
+    total = sum(students[i][1:])
+    students[i].append(total)
+    students[i].append(total/len(students[i][1:]))
+
+print(students[:5])
+# %%
+
+
+col_dic = {0: '이름', 1: '국어', 2: '영어', 3: '수학', 4: '과학', 5: '정보', 6: '미술', 7:"체육"}
+# %%
+def show_info(num):
+    for i in range(len(col_dic)):
+        print(col_dic[i], students[num][i])
+        
+        
 # %%
 cols = ["이름", "국어", "영어", "수학", "과학", "정보", "체육", "미술"]
+# cols = list(col_dic.values())
 df = pd.DataFrame(students, columns = cols)
 
 #df["총계"] = df[cols[1]] + df[cols[2]] + df[cols[3]] + df[cols[4]] + df[cols[5]] + df[cols[6]] + df[cols[7]] 
@@ -46,7 +65,9 @@ df = pd.DataFrame(students, columns = cols)
 df["총계"] = 0
 for sub_name in cols[1:]:
     df["총계"] = df["총계"] + df[sub_name]
-    
+# df["총계"] = df[df.columns[1:]].sum(axis=1)
+# df.sum(axis=1, numeric_only=True)
+
 df["평균"] = df["총계"] / (len(cols) - 1)
 print(df[df["평균"] == df["평균"].max()])
 print(df[df["평균"] == df["평균"].min()])
