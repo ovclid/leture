@@ -38,8 +38,12 @@ from matplotlib import font_manager, rc
 font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 rc('font', family=font_name)
 
+plt.title("국어 등급별 막대그래프")
+plt.xlabel("등급")
+plt.ylabel("성적")
 
-df["국어_등급"].value_counts().reindex(gi).plot()
+
+#df["국어_등급"].value_counts().reindex(gi).plot()
 df["국어_등급"].value_counts().reindex(gi).plot(kind="bar")
 
 # %%
