@@ -1,6 +1,6 @@
 ㅁ (1단계) MinGW - Minimalist GNU for Windows 설치 
   - https://sourceforge.net/projects/mingw/ 접속 및 다운로드
-  - 설치 (3개 모듈 설치 : 
+  - 설치 (3개 모듈 설치 : mingw-developer-toolkit, mingw32-base, mingw32-gcc-g++
   - 시스템 환경변수 (PATH) 설정 
 
 ㅁ (2단계) Visual Studio Code 설치하기
