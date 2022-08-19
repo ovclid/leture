@@ -1,9 +1,0 @@
-ㅁ visual studio code에 C++ 환경 구축하기
-  ㅇ (1단계) MinGW - Minimalist GNU for Windows 설치 
-    - https://sourceforge.net/projects/mingw/ 접속 및 다운로드
-    - 설치 (3개 모듈 설치 : 
-    - 시스템 환경변수 (PATH) 설정 
-    - 
-  
-  ㅇ (2단계) vsc에서 c/c++ extentions 설치
-    * 한글 문제 해결 : view - command palatte - Change File encoding - Reopen with encoding - Korean (EUC-KR)  
