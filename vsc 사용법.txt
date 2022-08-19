@@ -1,0 +1,4 @@
+
+ㅇ termianl에서 한글 폰트 깨질때 :
+  - view -> command palette -> change file encoding -> reopen with encoding -> Korean (EUC-KR)
+  
