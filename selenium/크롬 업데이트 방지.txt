@@ -10,6 +10,6 @@
 
 
 ㅇ 크롬 다운그레이드
-1. 이전 버전 크롬 다운로드 (https://google-chrome.en.uptodown.com/windows/versions)
-2. 현재 설치 버전 삭제
+1. 현재 설치 버전 삭제
+2. 이전 버전 크롬 다운로드 (https://google-chrome.en.uptodown.com/windows/versions)
 3. 이전 버전 크롬 설치
