@@ -1,0 +1,10 @@
+윈도우 11 
+ㅇ 파일 우클릭 추가옵션 삭제
+  - reg.exe add “HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32” /f /ve
+  - taskkill /f /im explorer.exe
+  - explorer.exe
+ㅇ 파일 우클릭 추가옵션 복구
+  - reg.exe delete “HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}” /f
+ 출처: https://master-hun.tistory.com/210 [IT 미쳐버리다:티스토리]
+
+
