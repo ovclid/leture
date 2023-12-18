@@ -1,5 +1,6 @@
 인공지능
 ㅇ 테디노트(랭체인 등) : https://teddylee777.github.io/langchain/langchain-tutorial-03/
+ㅇ langchain : https://pub.towardsai.net/langchain-cheatsheet-all-secrets-on-a-single-page-8be26b721cde
 
 윈도우 11 
 ㅇ 파일 우클릭 추가옵션 삭제
